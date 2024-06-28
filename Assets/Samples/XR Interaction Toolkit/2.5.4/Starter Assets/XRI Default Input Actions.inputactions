@@ -1053,11 +1053,11 @@
                 },
                 {
                     "name": "",
-                    "id": "b8aebee7-fa03-43d4-bfb7-77a3f87452cc",
-                    "path": "<XRController>{LeftHand}/{GripButton}",
+                    "id": "61c224ca-28e5-4ea3-9236-000b59b15d76",
+                    "path": "<XRController>{LeftHand}/{Primary2DAxisClick}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Generic XR Controller",
+                    "groups": "Noncontinuous Move;Generic XR Controller",
                     "action": "Teleport Mode Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
