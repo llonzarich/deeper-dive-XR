@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class TeleportController : MonoBehaviour
 {
@@ -24,13 +25,18 @@ public class TeleportController : MonoBehaviour
         teleportActivationReference.action.canceled += TeleportModeCancel; //  cancelling teleporter
     }
 
-    private void TeleportModeCancel(InputAction.CallbackContext obj) => Invoke("DeactivateTeleporter", .1f); // invoking deactivate teleporter
+    private void TeleportModeCancel(InputAction.CallbackContext obj) { Invoke("DeactivateTeleporter", .1f);
+       // teleportationGameObject.GetComponent<XRInteractorLineVisual>().reticle.SetActive(false);
+    }// invoking deactivate teleporter
 
 
-    void DeactivateTeleporter() => onTeleportCancel.Invoke(); 
+    void DeactivateTeleporter() => onTeleportCancel.Invoke();
 
 
-    private void TeleportModeActivate(InputAction.CallbackContext obj) => onTeleportActivate.Invoke(); // invoking activating teleporter
+    private void TeleportModeActivate(InputAction.CallbackContext obj) {
+
+        //teleportationGameObject.GetComponent<XRInteractorLineVisual>().reticle.SetActive(true);
+        onTeleportActivate.Invoke(); }// invoking activating teleporter
    
 
 
