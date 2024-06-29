@@ -6,9 +6,11 @@ using UnityEngine;
 public class CanvasPosition : MonoBehaviour
 {
 
-    [SerializeField] private GameObject camera,PanelText;
+    [SerializeField] private GameObject camera, PanelText;
 
     [SerializeField] private int distance;
+
+    public Transform target;
 
     public void placeCanvas()
     {
@@ -30,6 +32,6 @@ public class CanvasPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.LookAt(target);
     }
 }
