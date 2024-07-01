@@ -80,6 +80,7 @@ public class CanvasPosition : MonoBehaviour
     {
         TMP_Text mytext = PanelText.GetComponent<TMP_Text>();
         mytext.text = text;
+        //change panel size based on amount of text
     }
 
     // Start is called before the first frame update
