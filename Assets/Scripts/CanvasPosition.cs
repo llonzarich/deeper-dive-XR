@@ -15,6 +15,8 @@ public class CanvasPosition : MonoBehaviour
     public void placeCanvas()
     {
         this.transform.position = camera.transform.position + camera.transform.forward * distance;
+        this.transform.rotation = camera.transform.rotation;
+        this.transform.rotation = Quaternion.Euler(camera.transform.localEulerAngles.x, camera.transform.localEulerAngles.y, 0);
     }
 
     public void assignText(string text)
